@@ -1,0 +1,6 @@
+//visual studio  --많이 쓰이는 것
+빈 프로젝트
+콘솔 앱
+windows 데스크톱 마법사
+windows 데스크톱 애플리케이션
+MFC app 

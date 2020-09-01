@@ -1,0 +1,2 @@
+C:\Users\tnswh\sunjo\bit education\WinApi200901\Debug\WinApi200901.exe
+C:\Users\tnswh\sunjo\bit education\WinApi200901\Debug\WinApi200901.pdb
