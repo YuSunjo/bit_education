@@ -29,10 +29,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_ int       nCmdShow)
 {
 	int sum = 0;
-	for (int count = 0; count < 10; count++) 
-	{
-		sum += count;
-	}
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
@@ -116,17 +112,23 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	
 	hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
-
+	int num = 5;
+	int x = num % 4;
+	int y = num / 4;
 	HWND hWnd = CreateWindowW(
 		szWindowClass,
 		//_T("호랑이"),
 		//TEXT("호랑이"),
 		szTitle,
 		WS_OVERLAPPEDWINDOW,
-		GetSystemMetrics(SM_CXSCREEN) / 2 - (800 / 2),                                       //윈도우 창의 시작 위치 x
-		GetSystemMetrics(SM_CYSCREEN) / 2 - (600 / 2),                                       //윈도우 창의 시작 위치 y
-		800,                                       //윈도우의 가로
-		600,                                       //윈도우의 세로길이
+		GetSystemMetrics(SM_CXSCREEN) / 4 * x,
+		GetSystemMetrics(SM_CYSCREEN) /4*y,
+		GetSystemMetrics(SM_CXSCREEN)/4,
+		GetSystemMetrics(SM_CYSCREEN)/4,
+		//GetSystemMetrics(SM_CXSCREEN) / 2 - (800 / 2),                                       //윈도우 창의 시작 위치 x
+		//GetSystemMetrics(SM_CYSCREEN) / 2 - (600 / 2),                                       //윈도우 창의 시작 위치 y
+		//800,                                                                                 //윈도우의 가로
+		//600,                                                                                 //윈도우의 세로길이
 		nullptr,
 		nullptr,
 		hInstance,
@@ -160,13 +162,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 {
 	switch (message)
 	{
+	case WM_MOUSEMOVE:
+	{
+		long result = MessageBox(hWnd, TEXT("HELLO, API"), TEXT("FIRST"), MB_OKCANCEL);	    //hWnd -> 주체  MB_OK -> 중요!ok라는 버튼 나오게
+		//modal box --> 자식이 나타났을 때 부모 제어 불가능  <--> modalless 
+		//MB_OKCANCEL --> return 값이 있다 return 값이 1 
+		if (result == IDOK) {         
+			MessageBox(hWnd, TEXT("ok"), TEXT("ok"), MB_OK);
+		}
+		else {
+			MessageBox(hWnd, TEXT("ng"), TEXT("ng"), MB_OK);
+		}
+	}
+	break;
 	case WM_LBUTTONDOWN:
 	{
-		//typedef 문법으로 새로 정의 된 문장 or 구조체 
-		WCHAR str[32];
-		static short Ct = 0;                                 //특정함수에서만 전역함수를 쓰고 싶을 때
-		wsprintf(str, L"한글%d\n", Ct++);                    //w - 유니코드 s - 메모리
-		OutputDebugString(str);                              //디버깅으로 실행 
+		
 	}
 	break;
 	//case WM_LBUTTONDOWN:         //마우스 좌측 버튼 클릭
