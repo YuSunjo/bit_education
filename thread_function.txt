@@ -1,0 +1,19 @@
+	HANDLE CreateThread(
+	  LPSECURITY_ATTRIBUTES   lpThreadAttributes,
+	  SIZE_T                  dwStackSize,
+	  LPTHREAD_START_ROUTINE  lpStartAddress,
+	  __drv_aliasesMem LPVOID lpParameter,
+	  DWORD                   dwCreationFlags,
+	  LPDWORD                 lpThreadId
+	);
+	
+	
+	uintptr_t _beginthreadex
+	 (void* security, unisgned stack_size, unsigned (*start_address)(void*), void *arglist, unsigned initflag, unsigned *thraddr);
+	
+	 void* security                                : 쓰레드의 보안관련정보 전달(필요없을경우 NULL)
+	 unsigned stack_size                     : 스택의 크기전달 (기본 크기로 설정하고 싶으면 0)
+	 unsigned (* start_address)(void*) : 쓰레드 시작함수 주소 전달
+	 void *arglist                                  : 함수호출시 전달하고 싶은 인자
+	 unisigned initflag                          : 쓰레드의 생성 이후의 행동을 결정. 0을 전달하면 생성과 동시에 실행된다
+ 	 unsigned* thread			: 쓰레드 ID의 저장을 위한 변수의 주소값
