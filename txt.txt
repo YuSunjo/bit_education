@@ -14,3 +14,37 @@ MFC app
 f5말고 f10누르면 처음 진입점에서 출발 
 f11 -> 함수 안에 들어가서 디버깅 할 수 있음
 ctrl + f10 -> 그 커서가 있는곳까지만 디버깅됨 
+
+//
+                 Unicode               범용타입 
+char            wchar_t            TCHAR(WCHAR)
+char*           wchar_t*               LPTSTR
+const char*  const wchar_t*       LPCSTR 
+
+
+//
+HWND        -윈도우에 대한 handle
+HCURSOR   -커서에 대한 핸들
+HICON        - 아이콘에 대한 핸들
+HMENU      - 메뉴에 대한 핸들 
+HDC           - 그래픽 디바이스에 대한 핸들 
+
+//
+               Unicode           범용함수
+strlen        wcslen             _tcslen
+strcpy        wcscpy            _tcscpy
+strcat        wcscat             _tcscat
+strcmp        wcscmp            _tcscmp
+
+*LPSTR, LPTSTR
+LP -> long pointer 를 나타내는 약어 16비트 시절 윈도우 유산
+현재 -> .NET에서 64bit pointer 
+
+유니코드용 
+LPWSTR = long pointer wide string = w_char*
+LPCWSTR = long pointer constant wide string = const w_char*
+T메크로형
+LPTSTR =LPSTR = char*
+LPCTSTR = LPCSTR = const char* 
+
+
