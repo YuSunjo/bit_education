@@ -140,11 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Env.c" />
+    <ClCompile Include="Env_2.cpp" />
     <ClCompile Include="exam.c" />
     <ClCompile Include="commandlinetoArg.c" />
+    <ClCompile Include="heap.cpp" />
     <ClCompile Include="thread.c" />
     <ClCompile Include="thread_2.cpp" />
     <ClCompile Include="thread_3.cpp" />
+    <ClCompile Include="thread_sync.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,21 +18,21 @@
 //	
 //
 //	if (testEdit == NULL) {
-//		LPTSTR p_error_message;
-//		/*DWORD error_code = GetLastError();
+//		//LPTSTR p_error_message;
+//		DWORD error_code = GetLastError();
 //		TCHAR error_string[64];
 //		wsprintf(error_string, TEXT("%d"), error_code);
-//		MessageBox(hWnd, error_string, TEXT("ERROR"), MB_OK);*/
+//		MessageBox(hWnd, error_string, TEXT("ERROR"), MB_OK);
 //
 //		//GetLastError오류 코드 값에 대한 설명을 에러 코드를 문자열 형태로 저장(p_error_message에)
-//		FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER |
-//			FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, GetLastError(),
-//			MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT)
-//			// MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US)
-//			,(LPTSTR)&p_error_message, 0, NULL);
+//		//FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER |
+//		//	FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, GetLastError(),
+//		//	MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT)
+//		//	// MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US)
+//		//	,(LPTSTR)&p_error_message, 0, NULL);
 //
-//		MessageBox(hWnd, p_error_message, TEXT("ERROR"), MB_OK);
-//		free(p_error_message);
+//		//MessageBox(hWnd, p_error_message, TEXT("ERROR"), MB_OK);
+//		//free(p_error_message);
 //	}
 //	
 //}
@@ -101,7 +101,7 @@
 //	}
 //	return 0;
 //}
-//
+
 
 
 //#include <stdio.h>	

@@ -1,9 +1,9 @@
-#include <stdio.h>
-#include <tchar.h>	
-#include <Windows.h>	
+//#include <stdio.h>
+//#include <tchar.h>	
+//#include <Windows.h>	
 //#include <strsafe.h>	
-#include <stdlib.h>	
-
+//#include <stdlib.h>	
+//
 //void GetEnv()
 //{ 
 //	PTSTR pEnvBlock = GetEnvironmentStrings();            
@@ -75,8 +75,8 @@
 //}
 
 //regedit에 저장되어 있는 환경변수 있는 환경변수들을 가져오는 것
-
-
+//
+//
 //특정한 환경변수를 긁어오는 함수 
 //void PrintEnvironmentVariable(PCTSTR pszVariableName)
 //{
