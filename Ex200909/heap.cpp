@@ -14,7 +14,7 @@
 //
 //typedef struct {
 //	TreeNode* root;
-//}TreeType;
+//}TreeType; 
 //
 //
 //void InitTree(TreeType* t)

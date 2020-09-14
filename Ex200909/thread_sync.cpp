@@ -56,7 +56,7 @@
 //}
 
 //2. Mutex
-
+//
 //#include <process.h>	    
 //#include <Windows.h>
 //#include <tchar.h>	
@@ -105,6 +105,7 @@
 //	return 0;
 //
 //}
+//
 //unsigned int WINAPI ThreadFunc(void* lParam)
 //{
 //	//Mytex 가 signal 일때까지 기다리고 누군가 signal들어오는 순간에 non-signal 로 바뀜
@@ -236,6 +237,8 @@
 //	printf("Thread %d: done \n", GetCurrentThreadId());
 //	return TRUE;
 //}
+
+
 
 //Event  
 
